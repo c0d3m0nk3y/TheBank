@@ -68,7 +68,6 @@ class SendView(View):
 
         pin = int(request.POST['pin'])
 
-        # Passwords of "zero" are unsafe
         if from_account.pin is None:
             from_account.pin = pin
             from_account.save()
